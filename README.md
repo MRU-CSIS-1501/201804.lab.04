@@ -42,9 +42,8 @@ Here's something you can use to color-code lines that go past that point:
 ### TRAILING SPACE REMOVER
 
 <pre>
-;; delete trailing whitespace on exit
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;; delete trailing whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 </pre>
 
 ### COLOR THEMES
